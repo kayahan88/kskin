@@ -1,0 +1,19 @@
+.footer{
+    height: 30vh;
+    padding: 5%;
+    margin-bottom: 2%;
+    font-family:sans-serif;
+}
+
+.columns{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.columns > .footer-links > p:hover {
+    cursor: pointer;
+    color: gray;
+}

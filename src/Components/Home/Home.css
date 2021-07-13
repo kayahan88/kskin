@@ -1,0 +1,343 @@
+.home{
+    height: auto;
+}
+
+.home-image{
+    width: 100%;
+    height: 120vh;
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+}
+
+.text-box{
+    position: absolute;
+    width: 30%;
+    text-align: right;
+    color: white;
+    font-size: 40px;
+    font-family:sans-serif;
+    color: white;
+    top: 38%;
+    left: 60%;
+}
+
+.k-skin{
+    position: absolute;
+    top: 18%;
+    left: 23%;
+    font-size: 60px;
+    font-family:sans-serif;
+    color: white;
+    
+}
+
+.button{
+    position: relative;
+    margin-top: 36%;
+    margin-left: 55%;
+    
+    background-color: transparent;
+    color: white;
+    /* color: rgb(209, 90, 110); */
+    border: whitesmoke;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    /* border-radius: 4px; */
+    padding: .5%;
+    /* opacity: 80%; */
+}
+
+.girl-5{
+    position: absolute;
+    z-index: -2;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    margin-top: 210px;
+    margin-bottom: 300px;
+    height: auto;
+    /* filter: brightness(90%); */
+    /* opacity: 30%; */
+    /* border-radius: 10px; */
+    /* transform: rotate(90deg); */
+}
+
+.arrow{
+    display: none;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    height: 400px;
+    width: 400px;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes pulse{
+    0% {height: 400px; width: 400px;}
+    30% {width: 430px;}
+    50% {width: 420px;}
+    70% {width: 410px}
+    90% {width: 405px;}
+    100% {width: 400px;}
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+    animation-delay: 7s;
+  }
+
+  .modal-content {
+    position: fixed;
+    bottom: 25%;
+    background-color: #fefefe;
+    width: 30%;
+    left: 35%;
+    height: 50%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+  }
+
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+
+  .text-box-2{
+      position: absolute;
+      top: 170vh;
+      width: 20%;
+      left: 4%;
+      text-align: left;
+      color: white;
+      font-size: 40px;
+      font-family:sans-serif;
+  }
+
+  .glob{
+    position: absolute;
+    z-index: -2;
+    top: 241vh;
+    left: 15%;
+    width: 70%;
+    margin-top: 230px;
+    margin-bottom: 300px;
+    height: 95vh;
+    object-fit: cover;
+}
+  .girl-2{
+    position: absolute;
+    z-index: -2;
+    top: 241vh;
+    left: 15%;
+    width: 70%;
+    margin-top: 230px;
+    margin-bottom: 300px;
+    height: 95vh;
+}
+  .lemon-bottle{
+    position: absolute;
+    z-index: -2;
+    top: 241vh;
+    left: 15%;
+    width: 70%;
+    margin-top: 230px;
+    margin-bottom: 300px;
+    height: 95vh;
+    object-fit: cover;
+}
+
+.home-3 > img[visibility='hidden'][leaving='left']{
+    animation-name: leavingLeft;
+    animation-duration: .4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.home-3 > img[visibility='visible'][coming='left']{
+    animation-name: comingLeft;
+    animation-duration: .4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.home-3 > img[visibility='hidden'][leaving='right']{
+    animation-name: leavingRight;
+    animation-duration: .9s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.home-3 > img[visibility='visible'][coming='right']{
+    animation-name: comingRight;
+    animation-duration: .38s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+}
+
+@keyframes leavingLeft{
+    from {opacity: 1}
+    to {opacity: 0; left: -100%;}
+}
+
+@keyframes comingLeft{
+    from {opacity: 0; left: 100%;}
+    to {opacity: 1;}
+}
+@keyframes leavingRight{
+    from {opacity: 1}
+    to {opacity: 0; left: 70%;}
+}
+
+@keyframes comingRight{
+    from {opacity: 0; left: -70%;}
+    to {opacity: 1;}
+}
+
+
+.text-box-3{
+    position: absolute;
+    top: 290vh;
+    width: 20%;
+    right: 25%;
+    text-align: right;
+    color: black;
+    font-size: 40px;
+    font-family:sans-serif;
+}
+
+.arrowButtonLeft{
+    position: absolute;
+    top: 310vh;
+    left: 5%;
+    transform: rotate(180deg);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 90px;
+    animation-name: shrinkLeft;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.arrow-button-right{
+    position: absolute;
+    top: 310vh;
+    right: 5%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 90px;
+    animation-name: shrinkRight;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.arrowButtonLeft:hover{
+    cursor: pointer;
+    animation-name: growLeft;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.arrow-button-right:hover{
+    cursor: pointer;
+    animation-name: growRight;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes growRight{
+    0% {font-size: 90px}
+    100% {font-size: 93px; right: 4.6%}
+}
+
+@keyframes shrinkRight{
+    0% {font-size: 93px; right: 4.6%}
+    100% {font-size: 90px}
+}
+
+@keyframes growLeft{
+    0% {font-size: 90px}
+    100% {font-size: 93px; left: 4.6%}
+}
+
+@keyframes shrinkLeft{
+    0% {font-size: 93px; left: 4.6%}
+    100% {font-size: 90px}
+}
+
+.home-4{
+    position: absolute;
+    top: 370vh;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.home-4-image{
+    position: relative;
+    /* top: 10vh; */
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.text-box-4{
+    position: absolute;
+    top: 25vh;
+    width: 20%;
+    right: 15%;
+    text-align: right;
+    color: white;
+    font-size: 40px;
+    font-family:sans-serif;
+}
+.text-box-5{
+    position: absolute;
+    top: 75vh;
+    width: 60%;
+    right: 20%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family:sans-serif;
+}
