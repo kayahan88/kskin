@@ -25,7 +25,12 @@
 
 .logo{
     position: fixed;
-    width: 100%;
+    font-size: 34px;
+}
+
+.logo > a{
+    text-decoration: none;
+    color: black;
 }
 
 .spacer-1{
@@ -38,8 +43,14 @@
     justify-content: space-between;
 }
 
-.nav-links > p:hover{
+.nav-links > a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links > a:hover{
     cursor: pointer;
+    color: gray;
 }
 
 .hamburger{

@@ -12,10 +12,10 @@ const Nav = () => {
             <h2 className='logo'><Link to='/'>k-skin</Link></h2>
             <div className='spacer-2'></div>
             <section className='nav-links'>
-                <p>SHOP</p>
+                <Link to='/Shop'>SHOP</Link>
                 <Link to='/FAQ'>FAQ</Link>
-                <p>ACCOUNT</p>
-                <p>CART</p>
+                <Link to='/ACCOUNT'>ACCOUNT</Link>
+                <Link to='/CART'>CART</Link>
             </section>
             <section className='hamburger'>
                 <div>-</div>

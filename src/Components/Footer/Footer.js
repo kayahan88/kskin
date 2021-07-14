@@ -18,16 +18,16 @@ const Footer = () => {
                 </section>
                 <section className='footer-links'>
                     <h1>Policies</h1>
-                    <p>Terms of Service</p>
-                    <p>Privacy Policy</p>
-                    <p>Shipping Policy</p>
-                    <p>Return Policy</p>
+                    <p><Link to='/TermsOfService'>Terms of Service</Link></p>
+                    <p><Link to='/PrivacyPolicy'>Privacy Policy</Link></p>
+                    <p><Link to='/ShippingPolicy'>Shipping Policy</Link></p>
+                    <p><Link to='/ReturnPolicy'>Return Policy</Link></p>
                 </section>
                 <section className='footer-links'>
                     <h1>Product</h1>
-                    <p>About Us</p>
+                    <p><Link to='/AboutUs'>About Us</Link></p>
                     <p><Link to='/FAQ'>FAQ</Link></p>
-                    <p>Store Locations Worldwide</p>
+                    <p><Link to='/StoreLocations'>Store Locations Worldwide</Link></p>
                 </section>
             </div>
 

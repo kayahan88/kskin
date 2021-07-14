@@ -1,0 +1,9 @@
+.shop-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.shop-images > img {
+    width: 28%;
+}

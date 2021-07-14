@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from '../Nav/Nav';
-import Footer from '../Footer/Footer';
-import grapefruitFlowers from '../../assets/grapefruit flowers.jpg';
+import Nav from '../../Nav/Nav';
+import Footer from '../Footer';
+import grapefruitFlowers from '../../../assets/grapefruit flowers.jpg';
 import './FAQ.css';
 
 const FAQ = () => {

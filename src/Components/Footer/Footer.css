@@ -13,7 +13,13 @@
     text-align: left;
 }
 
-.columns > .footer-links > p:hover {
+.columns > .footer-links > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+.columns > .footer-links > p > a:hover {
     cursor: pointer;
     color: gray;
+    text-decoration: none;
 }
