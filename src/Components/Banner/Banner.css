@@ -1,0 +1,16 @@
+.banner{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: white;
+    top: 7vh;
+    height: 3vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.spacer{
+    width: 2%;
+}

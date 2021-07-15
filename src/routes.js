@@ -12,6 +12,10 @@ import ReturnPolicy from './Components/Footer/Policies/ReturnPolicy';
 import Shop from './Components/Nav/Shop/Shop';
 import Account from './Components/Nav/Account/Account';
 import Cart from './Components/Nav/Cart/Cart';
+import IndividualProduct from './Components/Products/IndividualProduct/IndividualProduct';
+// import Moisturizer from './Components/Products/Moisturizer';
+// import NightSerum from './Components/Products/NightSerum/NightSerum';
+// import TheBodyLotion from './Components/Products/TheBodyLotion/TheBodyLotion';
 
 export default (
     <BrowserRouter>
@@ -28,6 +32,10 @@ export default (
             <Route path='/Shop' component={Shop} />
             <Route path='/Account' component={Account} />
             <Route path='/Cart' component={Cart} />
+            <Route path='/shopproducts/:product_id' component={IndividualProduct} />
+            {/* <Route path='/Moisturizer' component={Moisturizer} />
+            <Route path='/NightSerum' component={NightSerum} />
+            <Route path='/TheBodyLotion' component={TheBodyLotion} /> */}
         </Switch>
     </BrowserRouter>
 )
