@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../../Components/Nav/Nav';
 import '../Home/Home.css'
+import '../Home/HomeSmallest.css';
 import genericbottle from '../../assets/genericbottle.jpg'
 import arrow from '../../assets/arrow.png';
 
@@ -10,10 +11,10 @@ const Home = () => {
         <div className='home'>
             <Nav />
             <img className='home-image' src={genericbottle} />
-            <section>
+            <section className='text-box-k-skin'>
                 <h1 className='text-box'>Korean skincare made with only the best formulations and absolutely zero fragrances.</h1>
                 <h1 className='k-skin' >k-skin</h1>
-                <img className='arrow' src={arrow} />
+                {/* <img className='arrow' src={arrow} /> */}
                 {/* <button className='button' >What is Korean skincare?</button> */}
             </section>
             {/* <img className='sparkles' src={sparkles} /> */}

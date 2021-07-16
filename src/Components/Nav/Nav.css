@@ -1,8 +1,9 @@
+@media(max-width: 5000px){
 .nav{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 7vh;
-    right: 0;
+    left: 0;
     /* top: 1%; */
     display: flex;
     flex-direction: row;
@@ -37,20 +38,24 @@
     width: 50%;
 }
 
-.nav-links{
+.nav-links-web{
     display: flex;
     width: 25%;
     justify-content: space-between;
 }
 
-.nav-links > a{
+.nav-links-web > a{
     text-decoration: none;
     color: black;
 }
 
-.nav-links > a:hover{
+.nav-links-web > a:hover{
     cursor: pointer;
     color: gray;
+}
+
+.nav-links-mobile{
+    display: none;
 }
 
 .hamburger{
@@ -62,7 +67,85 @@
 }
 
 .hamburger > div{
+    display: none;
     font-size: 60px;
     line-height: 15%;
     font-weight: lighter;
+}
+}
+
+/*---------------------------------*/
+@media(max-width: 800px){
+    .nav{
+        width: 100vw;
+    }
+    .section-1{
+        position: absolute;
+        width: 100%;
+        top: 7vh;
+        height: 4vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hamburger{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        justify-content: space-around;
+        align-items: center;
+        /* border: 1px solid hotpink; */
+        height: 60%;
+        top: 20%;
+        right: 0px;
+        bottom: 35px;
+    }
+
+    .hamburger > div{
+        font-size: 60px;
+        /* border: 1px solid blue; */
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40%;
+        background-color: black;
+        height: 10%;
+    }
+
+    .nav-links-mobile{
+        display: flex;
+        position: fixed;
+        top: 7vh;
+        background-color: white;
+        width: 100vw;
+        flex-direction: column;
+        text-align: right;
+        font-size: 25px;
+        justify-content: space-between;
+        height: 24vh;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-right: 10%;
+        border-bottom: 1px solid rgb(200, 200, 200);
+    }
+
+    .nav-links-mobile > a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .nav-links-mobile > a:hover{
+        cursor: pointer;
+        color: gray;
+    }
+
+    .nav-links-web{
+        display: none;
+    }
 }

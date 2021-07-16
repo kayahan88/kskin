@@ -1,12 +1,14 @@
+@media(max-width: 5000px){
 .home{
+    width: 100vw;
     height: auto;
 }
 
 .home-image{
-    width: 100%;
+    width: 100vw;
     height: 120vh;
     position: absolute;
-    left: 0px;
+    right: 0px;
     z-index: -1;
 }
 
@@ -29,7 +31,10 @@
     font-size: 60px;
     font-family:sans-serif;
     color: white;
-    
+}
+
+.text-box-k-skin{
+    border: 1px solid navy;
 }
 
 .button{
@@ -340,4 +345,36 @@
     color: white;
     font-size: 40px;
     font-family:sans-serif;
+}
+}
+/* -------------------------------*/
+@media(max-width: 500px){
+    .home{
+        width: 100vw;
+    }
+    .home-image{
+        object-fit:cover;
+        height: 90vh;
+        z-index:-1;
+        border: 1px solid green;
+        top: 10vh;
+    }
+
+    .text-box-k-skin{
+        width: 100%;
+    }
+
+    .k-skin{
+        top: 10%;
+        text-align: center;
+    }
+
+    .text-box{
+        font-size: 27px;
+        /* border: 1px solid orange; */
+        width: 55vw;
+        right: 20px;
+        left: auto;
+        top: 26%;
+    }
 }
