@@ -2,19 +2,13 @@
 .nav{
     position: fixed;
     width: 100vw;
-    height: 7vh;
-    left: 0;
-    /* top: 1%; */
+    height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     color: black;
-    /* border: 1px solid hotpink; */
-    /* padding-left: 1%; */
-    /* padding-right: 3%; */
     font-family:sans-serif;
-    /* font-weight: bolder; */
     font-size: 18px;
     background-color: white;
     z-index: 2;

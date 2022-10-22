@@ -1,40 +1,44 @@
 @media(max-width: 5000px){
 .home{
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 
+button{
+    padding: 10px;
+    text-transform: uppercase;
+    width: 300px;
+    font-size: 20px;
+}
+
+// home1
 .home-image{
-    width: 100vw;
-    height: 120vh;
+    height: 80vh;
+    top: 10vh;
     position: absolute;
-    right: 0px;
+    object-fit: cover;
+    padding: 0px;
     z-index: -1;
 }
 
-.text-box{
-    position: absolute;
-    width: 30%;
-    text-align: right;
-    color: white;
-    font-size: 40px;
-    font-family:sans-serif;
-    color: white;
-    top: 38%;
-    left: 60%;
-}
-
-.k-skin{
-    position: absolute;
-    top: 18%;
-    left: 23%;
-    font-size: 60px;
-    font-family:sans-serif;
-    color: white;
-}
-
-.text-box-k-skin{
-    border: 1px solid navy;
+.homePage{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    .ctaHome1{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        align-items: flex-end;
+        justify-content: space-between;
+        font-size: 40px;
+        top: 250px;
+        max-height: 300px;
+        button{
+            margin-top: 20px;
+        }
+    }
 }
 
 .button{
@@ -54,20 +58,60 @@
     /* opacity: 80%; */
 }
 
-.girl-5{
-    position: absolute;
-    z-index: -2;
-    top: 100vh;
-    left: 0;
+// home2
+.home2{
+    position: relative;
+    height: 90vh;
     width: 100%;
-    margin-top: 210px;
-    margin-bottom: 300px;
-    height: auto;
-    /* filter: brightness(90%); */
-    /* opacity: 30%; */
-    /* border-radius: 10px; */
-    /* transform: rotate(90deg); */
+    .girl-5{
+        position: absolute;
+        height: 90vh;
+        width: 100%;
+        object-fit: cover;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+    .ctaHome2{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        justify-content: space-between;
+        font-size: 40px;
+        top: 250px;
+        color: white;
+        left: 30px;
+        button {
+            margin-top: 20px;
+        }
+    }
 }
+
+//////// home3
+.home3{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    .col{
+        width: 33.33333%;
+        img{
+            object-fit: cover;
+            width: 50%;
+        }
+
+    }
+    .citrusButtonContainer{
+        position: relative;
+        bottom: 80%;
+    }
+}
+
 
 .arrow{
     display: none;

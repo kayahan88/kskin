@@ -1,22 +1,35 @@
 import React from 'react';
-import Nav from '../../Components/Nav/Nav';
-import '../Home/Home.css'
+import '../Home/Home.scss'
 import '../Home/HomeSmallest.css';
-import genericbottle from '../../assets/genericbottle.jpg'
+import genericbottle from '../../assets/genericbottle.jpg';
+import homePhoto from '../../assets/glob.jpg';
 import arrow from '../../assets/arrow.png';
 
 
 const Home = () => {
     return (
         <div className='home'>
-            <Nav />
-            <img className='home-image' src={genericbottle} />
-            <section className='text-box-k-skin'>
+            <div className="row homePage">
+                <img className='home-image' src={homePhoto} alt=""/>
+                <div className="col-md-7"></div>
+                <div className="col-md-4 ctaHome1">
+                    <div>Korean skincare made with only the best formulations and absolutely zero fragrances.</div>
+                    <button>Shop All Products</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            {/* <section className='text-box-k-skin'>
                 <h1 className='text-box'>Korean skincare made with only the best formulations and absolutely zero fragrances.</h1>
                 <h1 className='k-skin' >k-skin</h1>
                 {/* <img className='arrow' src={arrow} /> */}
                 {/* <button className='button' >What is Korean skincare?</button> */}
-            </section>
+            {/* </section> */}
             {/* <img className='sparkles' src={sparkles} /> */}
             {/* <Home2 /> */}
 

@@ -17,7 +17,7 @@ const Nav = () => {
     return(
         <div className='nav'>
             <section className='section-1'>
-                <p>the #1 selling skincare in korea</p>
+                <p>The #1 selling skincare in Korea</p>
             </section>
             <div className='spacer-1'></div>
             <h2 className='logo'><Link to='/'>k-skin</Link></h2>

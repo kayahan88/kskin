@@ -1,7 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Nav from './Components/Nav/Nav';
+import Banner from './Components/Banner/Banner';
 import MainHome from './Components/Home/MainHome';
-import Home4 from './Components/Home/Home4';
+import Home4 from './Components/Home/Home5';
 import FAQ from './Components/Footer/FAQ/FAQ';
 import AboutUs from './Components/Footer/AboutUs/AboutUs';
 import StoreLocations from './Components/Footer/StoreLocations/StoreLocations';
@@ -19,6 +21,8 @@ import IndividualProduct from './Components/Products/IndividualProduct/Individua
 
 export default (
     <BrowserRouter>
+        <Nav />
+        <Banner />
         <Switch>
             <Route exact path='/' component={MainHome}/>
             <Route path='/home4' component={Home4} />

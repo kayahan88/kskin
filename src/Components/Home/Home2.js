@@ -1,12 +1,15 @@
 import React from 'react';
-import './Home.css';
+import './Home.scss';
 import girl5 from '../../assets/girl 5.jpg'
 
 const Home2 = () => {
     return(
-        <div>
+        <div className="home2">
             <img className='girl-5' src={girl5} />
-            <h1 className='text-box-2'>Some text here about SPF and how much is in the skincare.</h1>
+            <div className="col-md-2 ctaHome2">
+                    <div>Protect your skin from the sun.</div>
+                    <button>Shop SPF</button>
+                </div>
         </div>
     )
 }

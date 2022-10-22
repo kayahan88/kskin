@@ -2,6 +2,7 @@
 require("dotenv").config();
 const massive = require('massive');
 const express = require('express');
+const path = require('path');
 
 //require controllers
 const productsCtrl = require('./controllers/productsCtrl');
@@ -11,7 +12,7 @@ const app = express();
 
 const {SERVER_PORT, CONNECTION_STRING} = process.env;
 app.use(express.json());
-app.use(express.static(`${__dirname}/../build`));
+
 // app.use((req, res, next) => {
 //     res.header('Access-Control-Allow-Origin', '*');
 //     next();
@@ -66,6 +67,11 @@ app.get('/api/signs3', (req, res) => {
 app.get('/api/shopproducts', productsCtrl.getAllProducts);
 app.get('/api/shopproducts/:product_id', productsCtrl.getIndividualProduct);
 
+//production
+app.use(express.static(`${__dirname}/../build`));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 //massive
 massive ({

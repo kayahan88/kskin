@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Nav from '../../Nav/Nav';
-import Banner from '../../Banner/Banner';
 import Footer from '../../Footer/Footer';
 import star from '../../../assets/star.png';
 import './IndividualProduct.css'
@@ -34,8 +32,6 @@ const IndividualProduct = (props) => {
 
     return(
         <div>
-            <Nav />
-            <Banner />
             <section className='individual-product'>
                 <img src={product.product_image}/>
                 <section className='product-details-container'>

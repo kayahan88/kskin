@@ -1,16 +1,16 @@
 .banner{
     display: flex;
     position: fixed;
-    width: 100%;
     background-color: black;
     color: white;
-    top: 7vh;
+    top: 10vh;
     height: 3vh;
     justify-content: center;
     align-items: center;
     z-index: 2;
+    font-size: 12px;
 }
 
-.spacer{
-    width: 2%;
+.time{
+    margin-left: 10px;
 }
