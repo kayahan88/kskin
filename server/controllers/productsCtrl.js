@@ -13,6 +13,7 @@ module.exports = {
     getProductsByCollection: async (req, res) => {
         const db = await req.app.get('db');
         const {product_collection} = req.params;
+        console.log('productsCtrl ' + product_collection)
         db.products.get_products_by_collection(product_collection)
         .then(results => res.status(200).send(results))
     }

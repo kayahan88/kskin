@@ -7,13 +7,10 @@ import './Shop.scss'
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
-    const [stars, setStars] = useState([]);
-    const [hover, setHover] = useState('hover');
     const [drawerOpen, setDrawerOpen] = useState("drawerClosed");
-    const [filterCitrus, setFilterCitrus] = useState(null);
-    const [filterJade, setFilterJade] = useState(null);
-    const [filterWhite, setFilterWhite] = useState(null);
     const [filteredBy, setFilteredBy] = useState(null);
+    const [sortBy, setSortBy] = useState(null);
+    const [reset, setReset] = useState(null);
 
     useEffect(() => {
         axios.get('/api/shop-products')
@@ -24,21 +21,28 @@ const Shop = () => {
         .catch(err => {
             console.log(err)
         })
-    }, [stars])
+    }, [reset]);
 
-    function setFilters(){
-        $(`#${filteredBy}`).prop("checked", "checked");
-        let newFilter = $(`#${filteredBy}`)
-        console.log(newFilter)
-        console.log(filteredBy)
+    useEffect(() => {
+        let collectionCode = null;
+        if(filteredBy == 'Cream'){
+            collectionCode = 1;
+        } else if(filteredBy == 'Jade'){
+            collectionCode = 2;
+        } else if(filteredBy == 'Citrus'){
+            collectionCode = 3;
+        }
+        axios.get(`/api/shop-products/filter-collection/${collectionCode}`)
+        .then(res => {
+            setProducts(res.data);
+            console.log('getting to here')
+            console.log(res)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }, [filteredBy])
 
-        // USE PARAMS!
-    }
-
-
-    function handleInputChange(e){
-        e.checked = !e.checked;
-    }
 
     function handleFilter(){
         let checkboxes = $('.filters input:checked');
@@ -47,28 +51,19 @@ const Shop = () => {
         checkboxes.each(function(){
             filterList.push(this.value)
             newFilter = this.value
-
+            console.log(newFilter)
         })
         getProductsByFilter(newFilter)
         setDrawerOpen(false)
     }
 
-    function getProductsByFilter(product_collection) {
-        axios.get(`/api/shop-products/filter-collection/${product_collection}`)
-        .then(res => {
-            setProducts(res.data);
-        })
-        .catch(err => {
-            console.log(err)
-        })
-        if(product_collection == 1){
-            setFilteredBy('citrus');
-        } else if(product_collection == 2){
-            setFilteredBy('jade');
-        } else if(product_collection == 3){
-            setFilteredBy('white');
-        }
-        setFilters();
+    function sortBy(){
+        let options = $('select.narrowButton ').value
+        console.log(options)
+    }
+
+    function getProductsByFilter (product_collection){
+        setFilteredBy(product_collection)
     }
 
     let shopProducts = products.map((product, index) => {
@@ -93,6 +88,14 @@ const Shop = () => {
     })
 
     const FilterDrawer = () => {
+        // const filterOptions = products.map((product, index) => {
+        //     return(
+        //         <div className="filter">
+        //             <input type="checkbox" id={product.product_collection}/>
+        //             <label for={product.product_collection}>{product.product_collection} Collection</label>
+        //         </div>
+        //     )
+        // })
         return (
             <div className={`filterDrawer col-md-3 ${drawerOpen}`}>
                 <div>Filter Products</div>
@@ -100,15 +103,15 @@ const Shop = () => {
                 <div className="filters">
                     <div>Collections</div>
                     <div className="filter">
-                        <input type="checkbox" id="white" value="3" checked={filterWhite} onChange={handleInputChange}/>
-                        <label for="white">White Collection</label>
+                        <input type="checkbox" id="cream" value="Cream" />
+                        <label for="white">Cream Collection</label>
                     </div>
                     <div className="filter">
-                        <input type="checkbox" id="jade" value="2" checked={filterJade} onChange={handleInputChange}/>
+                        <input type="checkbox" id="jade" value="Jade" />
                         <label for="jade">Jade Collection</label>
                     </div>
                     <div className="filter">
-                        <input type="checkbox" id="citrus" value="1" checked={filterCitrus} onChange={handleInputChange}/>
+                        <input type="checkbox" id="citrus" value="Citrus"/>
                         <label for="citrus">Citrus Collection</label>
                     </div>
                 </div>
@@ -125,14 +128,8 @@ const Shop = () => {
     function closeDrawer(){
         setDrawerOpen("drawerClosed")
     }
-    function filterByCitrus(){
-
-    }
-    function filterByJade(){
-        
-    }
-    function filterByWhite(){
-        
+    function resetFilters(){
+        setReset(true)
     }
 
     return(
@@ -143,13 +140,18 @@ const Shop = () => {
                 <div className="narrowResults row">
                     <div className="col-md-6 filter">
                         <button className="narrowButton" onClick={openDrawer}>Filter Products</button>
+                        <button className="narrowButton"onClick={resetFilters}>Reset Filters</button>
                     </div>
                     <div className="col-md-6 sortByFeature">
-                        <div className="sortBy">Sort By</div>
-                        <select className="narrowButton " >
-                            <option>Rating</option>
+                        <div className="sortBy">
+                            Sort By
+                            <select className="narrowButton " >
+                            <option>Rating (high to low)</option>
                             <option>Price (low to high)</option>
                         </select>
+                        </div>
+
+                        <button onClick={sortBy}>Sort</button>
                     </div>
                     
                     
