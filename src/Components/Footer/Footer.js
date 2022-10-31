@@ -32,7 +32,7 @@ const Footer = () => {
             </div>
 
             <div className='bottom-footer'>
-                <p>k-skin® 2021</p>
+                <p>k-skin® 2022</p>
             </div>
 
         </div>

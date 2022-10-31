@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../Home/Home.scss'
 import '../Home/HomeSmallest.css';
 import genericbottle from '../../assets/genericbottle.jpg';
@@ -14,24 +15,9 @@ const Home = () => {
                 <div className="col-md-7"></div>
                 <div className="col-md-4 ctaHome1">
                     <div>Korean skincare made with only the best formulations and absolutely zero fragrances.</div>
-                    <button>Shop All Products</button>
+                    <Link className="ctaButton ctaButtonShopAll">SHOP ALL PRODUCTS</Link>
                 </div>
             </div>
-
-
-
-
-
-
-
-            {/* <section className='text-box-k-skin'>
-                <h1 className='text-box'>Korean skincare made with only the best formulations and absolutely zero fragrances.</h1>
-                <h1 className='k-skin' >k-skin</h1>
-                {/* <img className='arrow' src={arrow} /> */}
-                {/* <button className='button' >What is Korean skincare?</button> */}
-            {/* </section> */}
-            {/* <img className='sparkles' src={sparkles} /> */}
-            {/* <Home2 /> */}
 
             <div id="myModal" className='modal'>
                 <div className='modal-content'>

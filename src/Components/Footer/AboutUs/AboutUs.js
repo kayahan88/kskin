@@ -6,8 +6,6 @@ import Footer from '../Footer';
 const AboutUs = () => {
     return(
         <div>
-            <Nav />
-            <Footer />
         </div>
     )
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Footer from '../../Footer/Footer';
 import star from '../../../assets/star.png';
 import './IndividualProduct.css'
 
@@ -13,7 +12,7 @@ const IndividualProduct = (props) => {
     const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
-        axios.get(`/api/shopproducts/${product_id}`)
+        axios.get(`/api/shop-products/${product_id}`)
         .then(res => {
             console.log('res.data', res.data)
             setProduct(res.data[0])
@@ -56,7 +55,6 @@ const IndividualProduct = (props) => {
                     </section>
                 </section>
             </section>
-            <Footer />
         </div>
     )
 }

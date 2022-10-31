@@ -1,29 +1,66 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
+import axios from 'axios';
 import './Home.scss';
-import lemonBottle from '../../assets/lemonBottle.jpg';
-import lemonBath from '../../assets/lemonbath.jpg';
-import grapefruit from '../../assets/grapefruit bottles.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { Pagination, Navigation } from "swiper";
+import 'swiper/swiper.min.css'
+import 'swiper/modules/pagination/pagination.min.css'
+import 'swiper/modules/navigation/navigation.min.css'
 
 const Home3 = () => {
+    const [products, setProducts] = useState([]);
+    const [stars, setStars] = useState([]);
+
+    useEffect(() => {
+        axios.get('/api/shop-products')
+        .then(res => {
+            setProducts(res.data);
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }, [stars])
+
+
+
+    let productSlides = products.map((product, index) => {
+        return(
+            <SwiperSlide>
+                <div className="swiperSlideContainer">
+                <img alt={`Shop the ${product.product_collection} Collection`} src={product.product_image}
+                
+                />
+                <div className="sliderLink">
+                <Link to={`/shopproducts/${product.product_collection}`} key={index}>
+                    <button>SHOP {product.product_collection} COLLECTION</button>
+                </Link>
+                </div>
+
+                </div>
+
+            </SwiperSlide>
+        )
+    })
+
     return(
         <div className="home3">
-            <div className="row">
-                <div className="col imgContainer">
-                    <img src={lemonBottle} alt=""/>
+            <div aria-hidden="true" className="row swiperContainer swiper-container">
+                <div className="swiper-wrapper">
+                    <Swiper
+                        pagination={{
+                            type: "progressbar",
+                            dynamicBullets: true
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        slidesPerView={2}
+                        className="mySwiper"
+                    >
+                        {productSlides}
+                    </Swiper>
+                   
                 </div>
-                <div className="col imgContainer" >
-                    <img src={lemonBath} alt=""/>
-                </div>
-                <div className="col imgContainer">
-                    <img  src={grapefruit} alt=""/>
-                </div>
-
-                
-                
-                <div className="col-md-12 citrusButtonContainer">
-                    <button className="ctaShopCitrus col-md-7">Shop the citrus collection</button>
-                </div>
-
             </div>
         </div>
     )

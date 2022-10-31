@@ -64,8 +64,9 @@ app.get('/api/signs3', (req, res) => {
 });
 
 //products endpoints
-app.get('/api/shopproducts', productsCtrl.getAllProducts);
-app.get('/api/shopproducts/:product_id', productsCtrl.getIndividualProduct);
+app.get('/api/shop-products', productsCtrl.getAllProducts);
+app.get('/api/shop-products/:product_id', productsCtrl.getIndividualProduct);
+app.get('/api/shop-products/filter-collection/:product_collection', productsCtrl.getProductsByCollection);
 
 //production
 app.use(express.static(`${__dirname}/../build`));

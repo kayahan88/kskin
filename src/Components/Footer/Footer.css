@@ -3,6 +3,8 @@
     padding: 5%;
     margin-bottom: 2%;
     font-family:sans-serif;
+    position: relative;
+    top: 10vh;
 }
 
 .columns{

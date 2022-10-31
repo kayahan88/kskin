@@ -1,9 +1,10 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Nav from './Components/Nav/Nav';
+import Footer from './Components/Footer/Footer';
 import Banner from './Components/Banner/Banner';
 import MainHome from './Components/Home/MainHome';
-import Home4 from './Components/Home/Home5';
+import Home4 from './Components/Home/Home4';
 import FAQ from './Components/Footer/FAQ/FAQ';
 import AboutUs from './Components/Footer/AboutUs/AboutUs';
 import StoreLocations from './Components/Footer/StoreLocations/StoreLocations';
@@ -41,5 +42,6 @@ export default (
             <Route path='/NightSerum' component={NightSerum} />
             <Route path='/TheBodyLotion' component={TheBodyLotion} /> */}
         </Switch>
+        <Footer />
     </BrowserRouter>
 )

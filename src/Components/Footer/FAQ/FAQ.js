@@ -8,7 +8,6 @@ const FAQ = () => {
     window.scrollTo(0,0);
     return(
         <div className='faq'>
-            <Nav />
             <img className='grapefruitFlowers' src={grapefruitFlowers} />
             <div className='block'>
                 <section>
@@ -36,9 +35,6 @@ const FAQ = () => {
                     
                 </section>
             </div>
-            <section className='footer-space'>
-                <Footer />
-            </section>
         </div>
     )
 }

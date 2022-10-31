@@ -5,8 +5,6 @@ import Footer from '../../Footer/Footer';
 const Account = () => {
     return(
         <div>
-        <Nav />
-        <Footer />
     </div>
     )
 }
