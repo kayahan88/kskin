@@ -57,10 +57,10 @@ const Shop = () => {
         setDrawerOpen(false)
     }
 
-    function sortBy(){
-        let options = $('select.narrowButton ').value
-        console.log(options)
-    }
+    // function sortBy(){
+    //     let options = $('select.narrowButton ').value
+    //     console.log(options)
+    // }
 
     function getProductsByFilter (product_collection){
         setFilteredBy(product_collection)
