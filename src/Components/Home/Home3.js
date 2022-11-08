@@ -32,8 +32,8 @@ const Home3 = () => {
                 
                 />
                 <div className="sliderLink">
-                <Link to={`/shopproducts/${product.product_collection}`} key={index}>
-                    <button>SHOP {product.product_collection} COLLECTION</button>
+                <Link to={`/shopproducts/${product.product_collection}`} key={index} className="home3Link">
+                    <button className="sliderLinkButton">SHOP {product.product_collection} COLLECTION</button>
                 </Link>
                 </div>
 

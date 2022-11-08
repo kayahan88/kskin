@@ -1,34 +1,33 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './Footer.css'
+import './Footer.scss'
 
 const Footer = () => {
     return(
-        <div className='footer'>
-            <div className='columns'>
-                <section>
-                    <h1>Contact Us</h1>
-                    <p>k-skin 608 Not Real, Gangnam, Seoul, Republic of Korea</p>
-                    <p>Phone: 02-213-3456</p>
-                    <p>Monday - Friday: 10:00am to 5:00pm (KST)</p>
-                    <p>Saturday - Sunday: Closed</p>
-                    <p>Customer Service: support@kskin.co.kr</p>
-                    <h1>k-skin</h1>
+        <div className='footer container'>
+            <div className='columns row'>
+                <div className="col-12 col-md-4 footerSection">
+                    <h3>Contact Us</h3>
+                    <div>k-skin 608 Not Real, Gangnam, Seoul, Republic of Korea</div>
+                    <div>Phone: 02-213-3456</div>
+                    <div>Monday - Friday: 10:00am to 5:00pm (KST)</div>
+                    <div>Saturday - Sunday: Closed</div>
+                    <div>Customer Service: support@kskin.co.kr</div>
                     <div>socials</div>
-                </section>
-                <section className='footer-links'>
-                    <h1>Policies</h1>
-                    <p><Link to='/TermsOfService'>Terms of Service</Link></p>
-                    <p><Link to='/PrivacyPolicy'>Privacy Policy</Link></p>
-                    <p><Link to='/ShippingPolicy'>Shipping Policy</Link></p>
-                    <p><Link to='/ReturnPolicy'>Return Policy</Link></p>
-                </section>
-                <section className='footer-links'>
-                    <h1>Product</h1>
-                    <p><Link to='/AboutUs'>About Us</Link></p>
-                    <p><Link to='/FAQ'>FAQ</Link></p>
-                    <p><Link to='/StoreLocations'>Store Locations Worldwide</Link></p>
-                </section>
+                </div>
+                <div className='col-12 col-md-4 footerLinks footerSection'>
+                    <h3>Policies</h3>
+                    <div><Link to='/TermsOfService'>Terms of Service</Link></div>
+                    <div><Link to='/PrivacyPolicy'>Privacy Policy</Link></div>
+                    <div><Link to='/ShippingPolicy'>Shipping Policy</Link></div>
+                    <div><Link to='/ReturnPolicy'>Return Policy</Link></div>
+                </div>
+                <div className='col-12 col-md-4 footerLinks footerSection'>
+                    <h3>Product</h3>
+                    <div><Link to='/AboutUs'>About Us</Link></div>
+                    <div><Link to='/FAQ'>FAQ</Link></div>
+                    <div><Link to='/StoreLocations'>Store Locations Worldwide</Link></div>
+                </div>
             </div>
 
             <div className='bottom-footer'>

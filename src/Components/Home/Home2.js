@@ -7,8 +7,8 @@ const Home2 = () => {
         <div className="home2">
             <img className='girl-5' src={girl5} alt="" />
             <div className="col-md-2 ctaHome2">
-                    <div>Protect your skin from the sun.</div>
-                    <button>Shop SPF</button>
+                    <div className="ctaHome2Text">Protect your skin from the sun.</div> 
+                    <button className="ctaHome2Button">Shop SPF</button>
                 </div>
         </div>
     )

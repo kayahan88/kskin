@@ -1,0 +1,31 @@
+.footerLinks a {
+    color: black;
+}
+h3 {
+    font-size: 20px;
+}
+.footer{
+    height: auto;
+    font-family:sans-serif;
+    font-size: 14px;
+    position: relative;
+    text-align: left;
+    padding: 10px;
+    padding-left: 10px;
+    margin-bottom: 100px;
+    .footerLinks{
+        color: black !important;
+    }
+    .footerSection{
+        margin-bottom: 10px;
+    }
+}
+.bottom-footer{
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .footer{
+        top: 10vh;
+    }
+}

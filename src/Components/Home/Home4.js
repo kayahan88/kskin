@@ -7,7 +7,11 @@ const Home4 = () => {
     return(
         <div className='home4'>
             <img className='home4-image' src={blue} alt=""/>
-            <div className='ctaHome4 col-md-12'>Something here about how you need to buy something now. </div>
+            <div className='ctaHome4'> 
+                <div className="ctaHome4Text">What is Korean skincare?</div>
+                <button className="ctaHome4Button">LEARN MORE</button>
+             </div>
+
         </div>
     )
 }

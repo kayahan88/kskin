@@ -1,4 +1,4 @@
-@media(max-width: 5000px){
+@media(min-width: 768px){
 
 *{
     text-decoration: none !important;
@@ -163,6 +163,7 @@ button, .ctaButton{
     top: 70%;
     font-size: 40px;
     color: black;
+    left: 50px;
 }
 
 ///////// modal
@@ -198,34 +199,166 @@ button, .ctaButton{
   }
 
 }
+
+
+
 /* -------------------------------*/
-@media(max-width: 500px){
+@media (max-width: 768px) and (min-width: 300px){
+    *{
+        text-decoration: none !important;
+    }
+//////// home 1
     .home{
-        width: 100vw;
+        width: 100%;
+        position: relative;
     }
     .home-image{
         object-fit:cover;
-        height: 90vh;
+        height: 70vh;
         z-index:-1;
-        border: 1px solid green;
         top: 10vh;
     }
-
-    .text-box-k-skin{
+    .ctaHome1{
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        font-size: 20px;
+        .ctaHome1Text{
+            text-align: right;
+            background-color: rgba(255, 255, 255,.4);
+            color: black;
+        }
+        .ctaButtonShopAll{
+            text-decoration: none;
+            color: black;
+            border: 2px solid black;
+            background-color: whitesmoke;
+            padding: 10px;
+            position: relative;
+            top: 10vh;
+        }
+    }
+///////// home 2
+    .home2{
+        position: relative;
+        height: 70vh;
         width: 100%;
+        .girl-5{
+            position: absolute;
+            height: 70vh;
+            width: 100%;
+            object-fit: cover;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .ctaHome2{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            align-items: flex-start;
+            justify-content: space-between;
+            font-size: 20px;
+            top: 10vh;
+            color: white;
+            left: 30px;
+            .ctaHome2Text{
+                background-color: rgba(0,0,0,0.7);
+            }
+            .ctaHome2Button{
+                text-decoration: none;
+                color: black;
+                border: 2px solid black;
+                background-color: whitesmoke;
+                padding: 10px;
+                position: relative;
+                top: 1vh;
+                text-transform: uppercase;
+            }
+        }
+    }
+    //////// home3
+    .home3{
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        .swiper-pagination-progressbar-fill{
+            background: black !important;
+        }
+        .swiper-button-prev, .swiper-button-next{
+            color: black !important;
+        }
+        .swiperContainer{
+            width: 100%;
+            height: 100%;
+            --bs-gutter-x: 0;
+            .swiperSlideContainer{
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .sliderLink{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    .sliderLinkButton{
+                        text-transform: uppercase;
+                        width: 70%;
+                        position: relative;
+                        bottom: 15vh;
+                    }
+                }
+            }
+        }
     }
 
-    .k-skin{
-        top: 10%;
+    ////////// home4
+    .home4{
+        height: 70vh;
+        width: 100%;
+        position: relative;
         text-align: center;
-    }
-
-    .text-box{
-        font-size: 27px;
-        /* border: 1px solid orange; */
-        width: 55vw;
-        right: 20px;
-        left: auto;
-        top: 26%;
+        display: flex;
+        justify-content: center;
+        .home4-image{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .ctaHome4{
+            position: absolute;
+            top: 70%;
+            font-size: 20px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column;
+            text-align: center;
+            .ctaHome4Text{
+                background-color: rgba(255, 255, 255,.4);
+            }
+            .ctaHome4Button{
+                text-decoration: none;
+                color: black;
+                border: 2px solid black;
+                background-color: whitesmoke;
+                padding: 10px;
+                position: relative;
+                top: 1vh;
+                text-transform: uppercase;
+            }
+        }
     }
 }
+

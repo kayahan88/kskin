@@ -1,4 +1,4 @@
-@media(max-width: 5000px){
+@media(min-width: 300px){
 .nav{
     position: fixed;
     width: 100vw;
@@ -69,21 +69,33 @@
 }
 
 /*---------------------------------*/
-@media(max-width: 800px){
+@media(min-width:300px) and (max-width: 800px){
     .nav{
+        position: fixed;
         width: 100vw;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-family:sans-serif;
+        font-size: 18px;
+        background-color: white;
+        z-index: 2;
     }
     .section-1{
         position: absolute;
         width: 100%;
         top: 7vh;
-        height: 4vh;
+        height: 5vh;
         background-color: black;
         color: white;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        padding: 10px;
     }
 
     .hamburger{
@@ -93,9 +105,8 @@
         width: 20%;
         justify-content: space-around;
         align-items: center;
-        /* border: 1px solid hotpink; */
-        height: 60%;
-        top: 20%;
+        height: 50%;
+        top: 10%;
         right: 0px;
         bottom: 35px;
     }
@@ -115,7 +126,7 @@
     .nav-links-mobile{
         display: flex;
         position: fixed;
-        top: 7vh;
+        top: 10vh;
         background-color: white;
         width: 100vw;
         flex-direction: column;

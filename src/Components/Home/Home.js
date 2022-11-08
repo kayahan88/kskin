@@ -14,7 +14,7 @@ const Home = () => {
                 <img className='home-image' src={homePhoto} alt=""/>
                 <div className="col-md-7"></div>
                 <div className="col-md-4 ctaHome1">
-                    <div>Korean skincare made with only the best formulations and absolutely zero fragrances.</div>
+                    <div className="ctaHome1Text">Korean skincare made with only the best formulations and absolutely zero fragrances.</div>
                     <Link className="ctaButton ctaButtonShopAll">SHOP ALL PRODUCTS</Link>
                 </div>
             </div>

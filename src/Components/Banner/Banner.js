@@ -29,7 +29,7 @@ const Banner = () => {
       }
 
     return(
-        <div className='col-md-12 banner'>
+        <div className='col-12 banner'>
             <div>Order within the next 2 hours to receive FREE SHIPPING!</div>
             <div className="time">
                 <Countdown time={60 * 120} />
