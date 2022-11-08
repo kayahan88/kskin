@@ -1,4 +1,8 @@
 @media(max-width: 5000px){
+
+*{
+    text-decoration: none !important;
+}
 .home{
     width: 100%;
     height: auto;
@@ -10,7 +14,6 @@ button, .ctaButton{
     width: 300px;
     font-size: 20px;
     text-decoration: none;
-    font-size: 20px;
     background-color: whitesmoke;
     border: 2px solid black;
     color: black;

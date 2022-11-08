@@ -67,22 +67,34 @@ const Shop = () => {
     }
 
     let shopProducts = products.map((product, index) => {
+        let productRatingArr = [];
+        let rating = (
+            <img className="star" src={star} />
+        )
+        for(let i = 0; i < product.product_rating; i++){
+            productRatingArr.push(rating)
+        }
+
+        
+
 
         return(
             <div className='col-md-4'> 
-                <div className="product-container ">
-                    <div className='image-container'>
-                        <Link to={`/shopproducts/${product.product_id}`} key={index}>
+                <Link to={`/shopproducts/${product.product_id}`} key={index}>
+                    <div className="product-container ">
+                        <div className='image-container'>
                             <img className='shop-image' src={product.product_image}/>
-                        </Link>
-                        <button className='hide-button'>DETAILS</button>
+                        </div>
+                        <div className='productDetails'>
+                            <div className='product-title'>{product.product_title}</div>
+                            <div className='rating-container'>
+                                {productRatingArr}
+                            </div>
+                            <div className='productPrice'>${product.product_price}</div>
+                        </div>
+                        <div className="detailsHover">DETAILS</div>
                     </div>
-                    <div className='product-title'>{product.product_title}</div>
-                    <div className='rating-container'>
-                        <img className='star' src={star}/>
-                        <div className="rating">{product.product_rating}</div>
-                    </div>
-                </div>
+                </Link>
             </div>
         )
     })
@@ -134,7 +146,7 @@ const Shop = () => {
 
     return(
         <div className="shopPage row">
-            <div className="container">
+            <div className="container"> 
                 <FilterDrawer />
                 <div className='pageTitle'>Shop All Products</div>
                 <div className="narrowResults row">
@@ -144,14 +156,14 @@ const Shop = () => {
                     </div>
                     <div className="col-md-6 sortByFeature">
                         <div className="sortBy">
-                            Sort By
-                            <select className="narrowButton " >
+                            Sort By: 
+                            <select className="narrowButton sortSelect" >
                             <option>Rating (high to low)</option>
                             <option>Price (low to high)</option>
                         </select>
                         </div>
 
-                        <button onClick={sortBy}>Sort</button>
+                        <button className="sortButton" onClick={sortBy}>Sort</button>
                     </div>
                     
                     
